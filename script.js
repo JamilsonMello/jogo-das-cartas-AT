@@ -88,14 +88,14 @@ function startGame(imagens, div) {
                     canPlay = !canPlay;
                     let bestTimePlayed = Number(localStorage.getItem('the-best-time') || 0);
                     let timePlayed = Number((new Date().getTime() - initialDate) / 1000);
-                    
+
                     if (bestTimePlayed === 0) {
                         localStorage.setItem('the-best-time', JSON.parse(timePlayed))
                     } else if (timePlayed < bestTimePlayed) {
                         localStorage.setItem('the-best-time', JSON.parse(timePlayed))
                     }
                     
-                    alert('seu tempo ' +  Number(localStorage.getItem('the-best-time') || 0) + ' segundos');
+                    alert('seu tempo ' +  timePlayed + ' segundos');
                 }
                 return;
             } 
